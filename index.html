@@ -14,7 +14,7 @@
   <body>
     <h1>Calculer son TDEE</h1>
 
-      <form class="form">
+      <form class="form TDEE-calculator">
           <div class="title">Vous êtes</div>
         <div class="gender">
           <input type="radio" name="gender" id="male" value="male" checked >
@@ -39,16 +39,18 @@
     </div>
     <div class="title">Niveau d'activité</div>
         <div class="activity">
-          <input type="radio" name="activity" id="sedentary" value="1.37" checked >
+          <input type="radio" name="activityLevel" id="sedentary" value="1.37" checked >
           <label for="sedentary">Sédentaire</label>
-          <input type="radio" name="activity" id="active" value="1.55" >
+          <input type="radio" name="activityLevel" id="active" value="1.55" >
           <label for="active">Actif</label>
-          <input type="radio" name="activity" id="veryActive" value="1.80" >
+          <input type="radio" name="activityLevel" id="veryActive" value="1.80" >
           <label for="veryActive">Très actif</label>
         </div>
-        <button type="submit">Calculer</button>
+        <button type="button" class="btn">Calculer</button>
         <div class="title">Votre Résultat :</div>
-        <div id="result"></div>
+        <div id="result" class="result">
+            <span class="calories-result" id="calories">0000</span>Calories/jour
+        </div>
     </form>
     <div class="decoration">
         <div class="circle first-circle"></div>
@@ -56,7 +58,8 @@
         <div class="rectangle first-rect"></div>
         <div class="rectangle second-rect"></div>
         <div class="rectangle third-rect"></div>
-        <div class="cross"></div>
+        <div class="weird-circle"></div>
+        
     </div>
     
 

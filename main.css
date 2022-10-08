@@ -1,74 +1,71 @@
-*, ::before, ::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-family: 'Roboto mono', sans-serif;
-    background: #ABD2FA;
-    overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Roboto mono", sans-serif;
+  background: #abd2fa;
+  overflow: hidden;
 }
 
 h1 {
-    font-size: clamp(32px, 5vw, 200px);
+  font-size: clamp(32px, 5vw, 200px);
 }
 
 .title {
-    font-size: clamp(20px, 2vw, 48px);
+  font-size: clamp(20px, 2vw, 48px);
 }
 
 .form {
-    padding: 20px;
-    margin-top: 50px;
-    height: auto;
-    width: 1000px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: #FEE026;
-    border: 7px solid black;
-    box-shadow: 15px 15px 0px 0px #CB8589;
+  padding: 20px;
+  margin-top: 50px;
+  height: auto;
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #fee026;
+  border: 7px solid black;
+  box-shadow: 15px 15px 0px 0px #cb8589;
 }
 
-.form > div  {
-    gap: 20px;
-    padding: 20px;
+.form > div {
+  gap: 20px;
+  padding: 20px;
 }
 
 input {
-    font-size: 20px;
+  font-size: 20px;
 }
 
-input[type="radio"]
-{
+input[type="radio"] {
   appearance: none;
 }
 
-
-input[type="radio"] + label
-{
+input[type="radio"] + label {
   cursor: pointer;
   position: relative;
   padding-left: 30px;
   line-height: 20px;
   font-size: 22px;
-  
 }
 
-input[type="radio"] + label::before
-{
+input[type="radio"] + label::before {
   content: "";
   display: inline-block;
   width: 20px;
   aspect-ratio: 1;
-  border: 3px solid #CB8589;
+  border: 3px solid #cb8589;
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -78,14 +75,13 @@ input[type="radio"] + label::before
   transition: all 0.3s;
 }
 
-input[type="radio"] + label::after
-{
+input[type="radio"] + label::after {
   content: "";
   display: inline-block;
   width: 10px;
   aspect-ratio: 1;
-  border: 2px solid #CB8589;
-  background: #CB8589;
+  border: 2px solid #cb8589;
+  background: #cb8589;
   border-radius: 50%;
   position: absolute;
   left: 5px;
@@ -95,157 +91,159 @@ input[type="radio"] + label::after
   transition: all 0.3s;
 }
 
-input[type="radio"]:checked + label::after
-{
+input[type="radio"]:checked + label::after {
   opacity: 1;
 }
 
 .input-text {
-    display: flex; 
+  display: flex;
 }
 
-
-input[type=text], button {
-    padding: 10px 20px;
-    outline: none;
-    border: 3px solid black;
-    box-shadow: 5px 5px 0px 0px #CB8589;
-    transition: all 0.3s ease-out;
-    background: #fff;
+input[type="text"],
+button {
+  padding: 10px 20px;
+  outline: none;
+  border: 3px solid black;
+  box-shadow: 5px 5px 0px 0px #cb8589;
+  transition: all 0.3s ease-out;
+  background: #fff;
 }
 
-input[type=text]:hover {
-    box-shadow: 0px 0px 0px 0px #CB8589;
+input[type="text"]:hover,
+button:hover {
+  box-shadow: 3px 3px 0px 0px #cb8589;
 }
-input[type=text]::placeholder {
-    color: rgba(0, 0, 0, 0.507);
+input[type="text"]::placeholder {
+  color: rgba(0, 0, 0, 0.507);
 }
 
 button {
-    width: 200px;
-    height: 50px;
-    font-size: 20px;
-    margin: 20px 0;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  margin: 20px 0;
 }
 
-button:hover {
-    box-shadow: 3px 3px 0px 0px #CB8589;
-}
+input[type="text"]:focus,
 button:active {
-    box-shadow: 0px 0px 0px 0px #CB8589;
+  box-shadow: 0px 0px 0px 0px #cb8589;
 }
 
+.gender,
+.activity {
+  display: flex;
+}
 
-
-.gender, .activity {
-    display: flex;
+.calories-result {
+    font-size: 32px;
+    padding: 20px;
+    color: #cb8589;
 }
 
 .circle {
-    position: absolute;
-    height: 150px;
-    width: 150px;
-    background: #FEE026;
-    border-radius: 50%;
-    border: 7px solid black;
-    
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  background: #fee026;
+  border-radius: 50%;
+  border: 7px solid black;
 }
 .first-circle {
-    top: 10px;
-    left: 10px;
+  top: 10px;
+  left: 10px;
 }
 .second-circle {
-    bottom: 10px;
-    right: 10px;
+  bottom: 10px;
+  right: 10px;
 }
 
 .rectangle {
-    position: absolute;
-    height: 150px;
-    width: 50px;
-    background: #FEE026;
-    border: 7px solid black;
-    transform: rotate(45deg);
+  position: absolute;
+  height: 150px;
+  width: 50px;
+  background: #fee026;
+  border: 7px solid black;
+  transform: rotate(45deg);
 }
 
 .first-rect {
-    top: 50px;
-    right: 150px;
+  top: 50px;
+  right: 150px;
 }
 .second-rect {
-    top: 500px;
-    right: 350px;
-    z-index: -1;
+  top: 500px;
+  right: 350px;
+  z-index: -1;
 }
 .third-rect {
-    top: 300px;
-    right: 0px;
-    z-index: -1;
+  top: 300px;
+  right: 0px;
+  z-index: -1;
 }
 
-.cross {
-    height: 250px;
-    width: 250px;
-    position: fixed;
-    border-radius: 30% 70% 70% 30% / 30% 85% 15% 70%;
-    border: 7px solid black;
-    background: #FEE026;
-    left: -50px;
-    bottom: -50px;
-    z-index: -5;
+.weird-circle {
+  height: 250px;
+  width: 250px;
+  position: fixed;
+  border-radius: 30% 70% 70% 30% / 30% 85% 15% 70%;
+  border: 7px solid black;
+  background: #fee026;
+  left: -50px;
+  bottom: -50px;
+  z-index: -5;
 }
 
 
 
-
-@media screen and (max-width:1300px) {
-    .decoration {
-        display: none;
-    }
-    
-
+@media screen and (max-width: 1300px) {
+  .decoration {
+    display: none;
+  }
 }
-@media screen and (max-width:1000px) {
-    .input-text {
-        flex-direction: column;
-    }
-    .form {
-        width: 75%;
-    }
-    input[type="radio"] + label {
-  
-        font-size: 18px;
-    }
-    
-
+@media screen and (max-width: 1000px) {
+  .input-text {
+    flex-direction: column;
+  }
+  .form {
+    width: 75%;
+  }
+  input[type="radio"] + label {
+    font-size: 18px;
+  }
 }
-@media screen and (max-width:750px) {
-    h1 {
-        display: none;
-    }
-    
-    .input-text {
-        flex-direction: column;
-    }
-    .form {
-        width: 100%;
-        height: 100%;
-        margin-top: 0;
-    }
-    input[type="radio"] + label {
-  
-  font-size: 18px;
-}
+@media screen and (max-width: 750px) {
+  h1 {
+    display: none;
+  }
 
+  .input-text {
+    flex-direction: column;
+  }
+  .form {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    border: 0;
+  }
+  input[type="radio"] + label {
+    font-size: 18px;
+  }
 }
-@media screen and (max-width:600px) {
-    .gender, .activity {
-        display: flex;
-        flex-direction: column;
-    }
-    .form > div  {
-        gap: 10px;
-        padding: 10px;
-    }
-
+@media screen and (max-width: 600px) {
+  .gender,
+  .activity {
+    display: flex;
+    flex-direction: column;
+  }
+  .form > div {
+    gap: 10px;
+    padding: 10px;
+  }
+  input[type="text"],
+  button {
+    padding: 10px 10px;
+  }
+  input[type="radio"] + label {
+    font-size: 16px;
+  }
 }
