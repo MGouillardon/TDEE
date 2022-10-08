@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="description" content="calculator TDEE.">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Calculer son TDEE</h1>
+
+      <form class="form">
+          <div class="title">Vous êtes</div>
+        <div class="gender">
+          <input type="radio" name="gender" id="male" checked >
+          <label for="male">un Homme</label>
+          <input type="radio" name="gender" id="female" >
+          <label for="female">une Femme</label>
+        </div>
+        <div class="input-text">
+        <div class="age">
+          <input type="text" name="age" id="age" placeholder="Votre âge">
+          <label for="age"></label>
+        </div>
+        <div class="height">
+            <input type="text" name="height" id="height" placeholder="Votre taille (en cm)" >
+            <label for="height"></label>
+          </div>
+        <div class="weight">
+          <input type="text" name="weight" id="weight" placeholder="Votre poids (en kg)">
+          <label for="weight"></label>
+        </div>
+        
+    </div>
+    <div class="title">Votre niveau d'activité</div>
+        <div class="activity">
+          <input type="radio" name="activity" id="sedentary" value="1.37" checked >
+          <label for="sedentary">Sédentaire</label>
+          <input type="radio" name="activity" id="active" value="1.55" >
+          <label for="active">Actif</label>
+          <input type="radio" name="activity" id="veryActive" value="1.80" >
+          <label for="veryActive">Très actif</label>
+        </div>
+        <button type="submit">Calculer</button>
+    </form>
+    
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
