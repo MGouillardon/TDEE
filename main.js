@@ -6,7 +6,7 @@ let height = document.getElementById("height");
 
 let weight = document.getElementById("weight");
 
-let caloriesResult = document.getElementById('calories');
+let caloriesResult = document.getElementById('caloriesResult');
 
 let calculateBtn = document.querySelector('button');
 
