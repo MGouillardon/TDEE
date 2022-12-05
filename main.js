@@ -1,1 +1,6 @@
-import '/main.css';
+import "/main.css";
+import "./script/calculator"
+
+
+
+
